@@ -1,10 +1,10 @@
-import {AfterContentInit, Component, ContentChild, HostBinding, Input} from '@angular/core';
-import {InputRefDirective} from '../common/input-ref.directive';
+import { AfterContentInit, Component, ContentChild, HostBinding, Input, ViewEncapsulation } from '@angular/core';
+import { InputRefDirective } from '../common/input-ref.directive';
 
 @Component({
   selector: 'au-fa-input',
   templateUrl: './au-fa-input.component.html',
-  styleUrls: ['./au-fa-input.component.css']
+  styleUrls: ['./au-fa-input.component.scss'],
 })
 export class AuFaInputComponent implements AfterContentInit {
   @Input() icon: string;

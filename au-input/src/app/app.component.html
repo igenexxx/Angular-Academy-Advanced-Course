@@ -3,8 +3,8 @@
     <li class="logo-small-container">
       <a class="v-center-block-parent">
         <img class="v-center-block logo-small angular-university-logo"
-             src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png"
-             data-pin-nopin="true">
+             data-pin-nopin="true"
+             src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 
       </a>
     </li>
@@ -19,47 +19,65 @@
 <div class="container">
   <h1>Font Awesome</h1>
 
-<div class="form">
+  <div class="form">
 
-  <div class="form-row">
+    <div class="form-row">
       <label>Normal Input:</label>
-      <input class="normal-input" type="email" name="email" placeholder="E-mail">
+      <input class="normal-input" name="email" placeholder="E-mail" type="email">
+    </div>
+
+    <div class="form-row">
+      <label>Email:</label>
+      <au-fa-input icon="envelope" id="email-field">
+        <input #input class="normal-input test-class" name="email" placeholder="E-mail" type="email">
+      </au-fa-input>
+    </div>
+
+    <div class="form-row">
+      <label>Password:</label>
+      <au-fa-input icon="lock" id="password-field">
+        <input class="normal-input test-class" name="password" placeholder="Password" type="password">
+      </au-fa-input>
+    </div>
+
+    <div class="form-row stripe-field">
+      <label>Stripe:</label>
+      <au-fa-input icon="cc-stripe">
+        <input class="normal-input" name="stripe" placeholder="Stripe">
+      </au-fa-input>
+    </div>
+
+    <div class="form-row">
+      <label>Paypal:</label>
+      <au-fa-input icon="paypal">
+        <input class="normal-input" name="paypal" placeholder="Paypal">
+      </au-fa-input>
+    </div>
+
+    <h1>Material Design</h1>
+
+    <div class="form-row">
+      <label>Lock:</label>
+      <au-md-input icon="search">
+        <input type="email" name="email" placeholder="E-mail" class="normal-input">
+      </au-md-input>
+    </div>
+
+    <div class="form-row">
+      <label>Id Number:</label>
+      <au-md-input icon="perm_identity">
+        <input type="text" name="identity" placeholder="Perm identity" class="normal-input">
+      </au-md-input>
+    </div>
+
+    <div class="form-row">
+      <label>Receipt number:</label>
+      <au-md-input icon="receipt">
+        <input type="text" name="receipt" placeholder="Receipt" class="normal-input">
+      </au-md-input>
+    </div>
+
   </div>
-
-  <div class="form-row">
-    <label>Email:</label>
-    <au-fa-input icon="envelope">
-      <input #input type="email" class="normal-input" name="email" placeholder="E-mail">
-    </au-fa-input>
-  </div>
-
-  <div class="form-row">
-    <label>Password:</label>
-    <au-fa-input icon="lock">
-      <input type="password" class="normal-input" name="password" placeholder="Password">
-    </au-fa-input>
-  </div>
-
-  <div class="form-row">
-    <label>Stripe:</label>
-    <au-fa-input icon="cc-stripe">
-      <input class="normal-input" name="stripe" placeholder="Stripe">
-    </au-fa-input>
-  </div>
-
-  <div class="form-row">
-    <label>Paypal:</label>
-    <au-fa-input icon="paypal">
-      <input class="normal-input" name="paypal" placeholder="Paypal">
-    </au-fa-input>
-  </div>
-
-</div>
-
-
-
-
-
 
 
 </div>

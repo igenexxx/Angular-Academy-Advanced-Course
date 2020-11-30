@@ -1,0 +1,10 @@
+
+$border-color: red;
+
+:host-context(.au-fa-input-red-theme) {
+  border-color: $border-color;
+
+  &.input-focus {
+    box-shadow: 0 0 5px $border-color;
+  }
+}
