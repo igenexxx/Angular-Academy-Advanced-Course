@@ -85,11 +85,13 @@
     </ng-template>
 
 
-    <au-modal *auModalOpenOnClick="paymentModal" [body]="modalBody">
-
-
-    </au-modal>
-
+    <au-modal
+      *auModalOpenOnClick="paymentModal"
+      [body]="modalBody"
+      [@fadeInOut]
+      (@fadeInOut.start)="onAnimationStart()"
+      (@fadeInOut.done)="onAnimationEnd()"
+    ></au-modal>
 
     <button #paymentModal>Open Payment Modal</button>
 
