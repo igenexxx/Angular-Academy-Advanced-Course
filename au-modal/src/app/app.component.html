@@ -3,8 +3,8 @@
     <li class="logo-small-container">
       <a class="v-center-block-parent">
         <img class="v-center-block logo-small angular-university-logo"
-             src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png"
-             data-pin-nopin="true">
+             data-pin-nopin="true"
+             src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 
       </a>
     </li>
@@ -20,23 +20,70 @@
 
   <h1>Modal Examples</h1>
 
+  <ng-template #authModalBody let-title="title" let-isLoginTabActive="loginTabActive">
+    <h3>{{ title  }}</h3>
 
+    <au-tab-panel>
+      <au-tab title="Login" [selected]="isLoginTabActive">
+        <form>
+          <div class="form-field">
+            <au-fa-input icon="envelope" id="email-field">
+              <input auInput autocomplete="off" name="email"
+                     placeholder="Email" type="email">
+            </au-fa-input>
+          </div>
+          <div class="form-field">
+            <au-fa-input icon="lock">
+              <input auInput autocomplete="off" name="email"
+                     placeholder="Password" type="password">
+            </au-fa-input>
+          </div>
+        </form>
+      </au-tab>
+      <au-tab title="Sign Up"  [selected]="!isLoginTabActive">
+        <form>
+          <div class="form-field">
+            <au-fa-input icon="envelope">
+              <input auInput autocomplete="off" name="email"
+                     placeholder="Email" type="email">
+            </au-fa-input>
+          </div>
+          <div class="form-field">
+            <au-fa-input icon="lock">
+              <input auInput autocomplete="off" name="email"
+                     placeholder="Password" type="password">
+            </au-fa-input>
+          </div>
+          <div class="form-field">
+            <au-fa-input icon="lock">
+              <input auInput autocomplete="off" name="email"
+                     placeholder="Confirm Password" type="password">
+            </au-fa-input>
+          </div>
+        </form>
+      </au-tab>
+    </au-tab-panel>
+  </ng-template>
 
+  <au-modal
+    #modal
+    [body]="authModalBody"
+    [hideOnEsc]="false"
+    [context]="{ title: 'Login or Sign Up', loginTabActive: loginActive }"
+    *auModalOpenOnClick="[loginButton, signUpButton]"
+  >
+    <i class="fa fa-times" (click)="modal.close()"></i>
+  </au-modal>
 
-
-
-
+  <au-modal id="testModal" *auModalOpenOnClick="testButton"></au-modal>
 
   <div class="modal-buttons">
-
-    <button #loginButton>Login</button>
-
-    <button #signUpButton>Sign Up</button>
-
+    <button #loginButton (click)="setLoginActive(true)">Login</button>
+    <button #signUpButton (click)="setLoginActive(false)">Sign Up</button>
+    <button id="testButton" #testButton>Test button</button>
   </div>
 
 </div>
-
 </body>
 
 

@@ -1,10 +1,9 @@
-import { TestBed, async } from '@angular/core/testing';
-import {TestBed, async, ComponentFixture} from '@angular/core/testing';
-import {DebugElement} from '@angular/core';
-import {By}              from '@angular/platform-browser';
+import { DebugElement } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import {TabPanelComponent} from "./tab-panel/tab-panel.component";
-import {TabComponent} from "./tab/tab.component";
+import { TabPanelComponent } from './tab-panel/tab-panel.component';
+import { TabComponent } from './tab/tab.component';
 
 
 describe('AppComponent', () => {
@@ -44,11 +43,9 @@ describe('AppComponent', () => {
 
     const tabs = emailField.queryAll(By.css('au-tab-pane .tab'));
 
-    //TODO expect(tabs).toBeTruthy();
-    //TODO expect(tabs.length).toBe(1);
+    // TODO expect(tabs).toBeTruthy();
+    // TODO expect(tabs.length).toBe(1);
   }));
-
-
 
 
 });
